@@ -275,7 +275,8 @@ def make_cloud_conf(lkp=lkp, cloud_parameters=None):
             "Nodes": ",".join(nodesets),
             "State": "UP",
             "DefMemPerCPU": defmem,
-            "SuspendTime": 300,
+            # Note: This is not yet supported by our version of slurm.
+            #"SuspendTime": 300,
             "Oversubscribe": "Exclusive" if partition.enable_job_exclusive else None,
             **partition.partition_conf,
         }
