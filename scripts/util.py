@@ -119,7 +119,9 @@ slurmdirs = NSDict(
         n: Path(p)
         for n, p in dict.items(
             {
+# NOTE: We use debian packaged slurm, it resides in /usr instead of /usr/local
                 "prefix": "/usr/local",
+#                "prefix": "/usr/local",
                 "etc": "/usr/local/etc/slurm",
                 "state": "/var/spool/slurm",
             }
